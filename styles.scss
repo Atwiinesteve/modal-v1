@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/images/v2osk-1Z2niiBPg5A-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+}
+
+.modal--container {
+    background: rgba(228, 228, 228, 0.274);
+    padding: 1.5rem;
+    border-radius: 2px;
+    text-align: center;
+    max-width: 900px;
+}
+
+.modals-header {
+    color: rgb(59, 59, 59);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.modal-content {
+    color: #fff;
+    line-height: 1.5;
+}
+
+button {
+    padding: 1rem;
+    background: transparent;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    color: black;
+    max-width: 400px;
+    .dialog--header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: black;
+        color: white;
+        padding: 1rem;
+        .fa-xmark {
+            cursor: pointer;
+            font-size: 1.3rem;
+            &:hover {
+                animation: rotate 300ms alternate;
+            }
+        }
+    }
+    .dialog--content {
+        padding: 1rem;
+        background: white;
+    }
+    .dialog--footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-weight: bolder;
+    }
+    &::backdrop {
+        background: red;
+        opacity: 0.7;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

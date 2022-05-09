@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("/images/v2osk-1Z2niiBPg5A-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+}
+
+.modal--container {
+  background: rgba(228, 228, 228, 0.274);
+  padding: 1.5rem;
+  border-radius: 2px;
+  text-align: center;
+  max-width: 900px;
+}
+
+.modals-header {
+  color: #3b3b3b;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+.modal-content {
+  color: #fff;
+  line-height: 1.5;
+}
+
+button {
+  padding: 1rem;
+  background: transparent;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  color: black;
+  max-width: 400px;
+}
+
+.modal .dialog--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
+.modal .dialog--header .fa-xmark {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.modal .dialog--header .fa-xmark:hover {
+  -webkit-animation: rotate 300ms alternate;
+          animation: rotate 300ms alternate;
+}
+
+.modal .dialog--content {
+  padding: 1rem;
+  background: white;
+}
+
+.modal .dialog--footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bolder;
+}
+
+.modal::-webkit-backdrop {
+  background: red;
+  opacity: 0.7;
+}
+
+.modal::backdrop {
+  background: red;
+  opacity: 0.7;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
